@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<center>
+  <br><br><br><br>
+  <div class="test" >
+    {% if error %}
+    <h1 class="small" style="color:red">Connection Failed! Retry<h1/>
+      {% else %}
+      <h1 class="small" style="color:green">Message Sent Successfully</h1>
+      {% endif %}
+
+  </div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+</center
+{% endblock %}

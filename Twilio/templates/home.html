@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <center>
+<div class="container">
+  <form id="contact" method="post" enctype="multipart/form-data" action="predictResult">
+    {% csrf_token %}
+    <h3>Please Enter Details</h3>
+    <fieldset>
+      <input placeholder="User Sid" type="text" tabindex="1" name="SidVal" required value={{temp.Sid}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Autherization Token" tabindex="2" required type="text" id="lname" name="TokenVal" value={{temp.Token}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Cell Phone Number" tabindex="2" required type="text" id="fname" name="CellVal" value={{temp.Cell}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Twilio Number" tabindex="2" required type="text" id="lname" name="TwilioVal" value={{temp.Twilio}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Message" tabindex="2" required type="text" id="fname" name="MessageVal" value={{temp.Message}}>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button>
+    </fieldset>
+  </form>
+</div>
+</center>
+{% endblock %}
